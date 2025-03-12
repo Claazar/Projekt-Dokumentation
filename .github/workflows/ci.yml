@@ -1,0 +1,13 @@
+name: Fake CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Zeige Secret (Fake)
+        run: echo "Geheimes Passwort: ${{ secrets.MY_SECRET_KEY }}"
